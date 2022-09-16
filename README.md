@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+### Create beautiful diagrams with ease!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Transform a json file into a beautiful diagrams that can be animated.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎯 The goal
 
-### `npm start`
+The goal of this repository is to create a web page able to generate a nice looking diagram on the fly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+It is using the power of [react flow](https://reactflow.dev) in order to do that.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Just pass the query where you are hosting the json graph
 
-### `npm test`
+### Example
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+http://localhost:3000/?url=https://www.mywebsite/files/myfile.json
+```
 
-### `npm run build`
+```
+{
+    "nodes": [
+        {
+          "id": "1",
+          "type": "input",
+          "data": { "label": "Input Node" },
+          "position": { "x": 250, "y": 25 }
+        },
+        {
+          "id": "2",
+          "data": { "label": "Default Node" },
+          "position": { "x": 100, "y": 125 }
+        },
+        {
+          "id": "3",
+          "type": "output",
+          "data": { "label": "Output Node" },
+          "position": { "x": 250, "y": 250 }
+        }
+      ],
+	"edges": [{
+			"id": "e1-2",
+			"source": "1",
+			"target": "2"
+		},
+		{
+			"id": "e2-3",
+			"source": "2",
+			"target": "3",
+			"animated": true
+		}
+	]
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Example](https://github.com/AnzyGit/flow-playground/blob/main/docs/demo.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+After that, the page should render a nice diagram that you can send.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🪜 Steps
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- ✅ Create a page that can render a diagram
+- ✅ Able to read a json file and render it
+- ✅ Use query params to fetch custom urls
+- 🚧 Host the page on a github page
