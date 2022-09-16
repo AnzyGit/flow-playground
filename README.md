@@ -54,7 +54,7 @@ http://localhost:3000/?url=https://www.mywebsite/files/myfile.json
 }
 ```
 
-![Example](https://github.com/AnzyGit/flow-playground/blob/main/docs/demo.gif)
+![Example](https://github.com/AnzyGit/flow-playground/blob/main/doc/demo.gif)
 
 After that, the page should render a nice diagram that you can send.
 
