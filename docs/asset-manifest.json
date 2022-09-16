@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/flow-playground/static/css/main.6312ce2c.css",
+    "main.js": "/flow-playground/static/js/main.f686ec94.js",
+    "static/js/787.47af36b2.chunk.js": "/flow-playground/static/js/787.47af36b2.chunk.js",
+    "index.html": "/flow-playground/index.html",
+    "main.6312ce2c.css.map": "/flow-playground/static/css/main.6312ce2c.css.map",
+    "main.f686ec94.js.map": "/flow-playground/static/js/main.f686ec94.js.map",
+    "787.47af36b2.chunk.js.map": "/flow-playground/static/js/787.47af36b2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6312ce2c.css",
+    "static/js/main.f686ec94.js"
+  ]
+}
